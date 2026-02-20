@@ -4,11 +4,29 @@
 <meta charset="UTF-8">
 <title>Ekran 2</title>
 <style>
-body{margin:0;background:black;}
-img{width:100vw;height:100vh;object-fit:cover;}
+body {
+  margin:0;
+  background:black;
+}
+img {
+  width:100vw;
+  height:100vh;
+  object-fit:cover;
+}
 </style>
 </head>
 <body>
-<img src="https://i.imgur.com/6yVMgsK.jpeg">
+
+<img id="slide" src="https://i.imgur.com/6yVMgsK.jpeg">
+
+<script>
+
+setInterval(function(){
+  index++;
+  if(index >= images.length) index = 0;
+  document.getElementById("slide").src = images[index];
+}, 5000);
+</script>
+
 </body>
 </html>
